@@ -6,12 +6,6 @@ import random
 import re
 import sys
 
-#
-# Complete the 'countSwaps' function below.
-#
-# The function accepts INTEGER_ARRAY a as parameter.
-#
-
 def countSwaps(a):
   
     count=0
