@@ -14,8 +14,7 @@ import sys
 #
 
 def countingSort(arr):
-    # Write your code here
-    
+ 
     frequency = [0]*(100)
 
     for num in arr:
