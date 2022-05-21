@@ -6,5 +6,6 @@ class Solution:
         for i in range(size//2):
             a=nums[i]+nums[size-1-i]
             arr.append(a)
+            
         return(max(arr))
         
