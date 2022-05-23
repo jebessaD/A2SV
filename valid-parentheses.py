@@ -5,7 +5,6 @@ class Solution:
         for brac in s:
             if brac in data.keys():
                 stack.append(brac)
-
             else:
                 if len(stack)>0:
                     a= stack.pop()
