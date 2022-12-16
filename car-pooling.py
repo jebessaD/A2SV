@@ -19,7 +19,6 @@ class Solution:
     def carPooling(self, trips: List[List[int]], capacity: int) -> bool:
         trips.sort(key=lambda x:x[2], reverse=True) # sort by index ==2 to get last destination
         car=[0]*(trips[0][2] + 1)  #get last destination for second index
-
         for n,i,j in trips:   #add n number of person at index i and drop person at index of j
             car[i] +=n
             car[j] -=n
