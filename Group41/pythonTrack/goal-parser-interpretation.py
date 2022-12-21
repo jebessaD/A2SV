@@ -5,13 +5,12 @@ class Solution:
         while i <len(command):
             if command[i] == "G":
                 ans+="G"
+            elif command[i+1]==")":
+                ans+="o"
+                i+=1
             else:
-                if command[i+1]==")":
-                    ans+="o"
-                    i+=1
-                else:
-                    ans+="al"
-                    i+=3
+                ans+="al"
+                i+=3
             i+=1
         return ans
             
