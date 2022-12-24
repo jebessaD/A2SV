@@ -1,0 +1,5 @@
+input()
+first=set(input().split(" "))
+input()
+second=set(input().split(" "))
+print(len(first.union(second)))
