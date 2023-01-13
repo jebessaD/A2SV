@@ -14,3 +14,4 @@ class Solution:
             for new_col in range(len(matrix[0])):
                 if new_row in zero_index[0] or new_col in zero_index[1]:
                     matrix[new_row][new_col] = 0
+                    
