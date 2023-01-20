@@ -13,3 +13,5 @@ for _ in range(size):
   
   if len(temp) == 2:
    prev=(temp[1]+temp[0])//2
+
+   
