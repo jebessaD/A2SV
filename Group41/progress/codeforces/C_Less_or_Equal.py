@@ -2,8 +2,11 @@ n,k = map(int,input().split(" "))
 nums= list(map(int,input().split(" ")))
 
 nums.sort()
-maximum = nums[k-1]
-if k < n and nums[k] == maximum:
-    print(-1)
-else:
-    print(maximum)
+ans = -1
+if not( k < n and nums[k] == nums[k-1]) and k!=0:
+    ans = nums[k-1]
+
+if k == 0 and min(nums) > 1:
+    ans= 1
+
+print(ans)
