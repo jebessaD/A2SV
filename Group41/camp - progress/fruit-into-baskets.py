@@ -10,7 +10,6 @@ class Solution:
                 if basket[fruits[left]] == 0:
                     basket.pop(fruits[left])
                 left += 1
-
             ans = max(ans , right - left + 1)
             
         return ans
