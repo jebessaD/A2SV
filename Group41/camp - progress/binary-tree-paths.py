@@ -4,6 +4,7 @@
 #         self.val = val
 #         self.left = left
 #         self.right = right
+
 class Solution:
     def binaryTreePaths(self, root: Optional[TreeNode]) -> List[str]:
         ans = []
