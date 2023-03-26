@@ -17,8 +17,7 @@ class MyLinkedList:
 
         if curr:
             return curr.val
-        else:
-            return - 1
+        return - 1
 
     def addAtHead(self, val: int) -> None:
         new_head = ListNode(val)
