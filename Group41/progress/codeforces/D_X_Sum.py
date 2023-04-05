@@ -20,6 +20,3 @@ for _ in range(size):
             max_num = max(max_num,num)
 
     print(max_num)
-
-
-    
