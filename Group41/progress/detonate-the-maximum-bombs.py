@@ -24,6 +24,7 @@ class Solution:
                 if child not in visited :
                     dfs(child)
 
+
         max_ = 1
         for node in graph:
             visited = set()
