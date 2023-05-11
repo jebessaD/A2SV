@@ -1,7 +1,7 @@
 class Solution:
     def minStoneSum(self, piles: List[int], k: int) -> int:
-        piles=list(map(lambda x:-x,piles))
-        heapify(piles)
+        heap=list(map(lambda x:-x,piles))
+        heapify(heap)
         for i in range(k):
-            heappush(piles,heappop(piles)//2)
-        return -sum(piles)
+            heappush(heap,heappop(heap)//2)
+        return -sum(heap)
