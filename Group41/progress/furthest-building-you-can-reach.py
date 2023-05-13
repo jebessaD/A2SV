@@ -20,7 +20,6 @@ class Solution:
                 heappush(heap,-num)
                 max_ = -heappop(heap)
                 bricks += (max_ - num)
-
                 ladders -= 1
             
 
