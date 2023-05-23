@@ -9,7 +9,6 @@ class Solution:
                 
             for i in range(len(nums)):
                 if not(bit_mask & 1 << i):
-
                     bit_mask = bit_mask | 1 << i
                     candidate.append(nums[i])
 
