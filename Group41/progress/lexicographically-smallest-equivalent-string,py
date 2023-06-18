@@ -1,0 +1,27 @@
+class Solution:
+    def smallestEquivalentString(self, s1: str, s2: str, baseStr: str) -> str:
+
+        parent = { char:char for char in (s1 + s2 + baseStr)}
+        def find(node):
+            p = parent[node]
+            while p != parent[p]:
+                parent[p]= parent[parent[p]]
+                p = parent[p]
+
+            return p
+
+        def union(char1,char2):
+            p1,p2 = find(char1),find(char2)
+            if p1 < p2:
+                parent[p2] = p1
+            else:
+                parent[p1] = p2
+
+        for char1,char2 in zip(s1,s2):
+            union(char1,char2)
+        ans = ""
+        for char in baseStr:
+            ans += find(char)
+
+        return ans     
+        
