@@ -8,7 +8,7 @@ def parallelCourses(n, prerequisites):
         graph[pre].append(post)
         indegrees[post] += 1
 
-    # print(graph,indegrees)
+
     queue = deque()
     visited = set()
     for i in range(1,n+1):
