@@ -8,11 +8,10 @@ class Solution:
             while p != parent[p]:
                 parent[p] = parent[parent[p]]
                 p = parent[p]
-
             return p
 
         self.ans = float("inf")
-        def union(node1,node2,distance):
+        def union(node1,node2):
             p1,p2= find(node1), find(node2)
 
             if rank[p1] < rank[p2]:
@@ -22,11 +21,11 @@ class Solution:
                 rank[p1] += rank[p2]
                 parent[p2] = p1
 
-        for n1,n2,d in roads:
-            union(n1,n2,d)
+        for n1,n2,_ in roads:
+            union(n1,n2)
 
         ans=float("inf")
-        for start,end,distance in roads:
-            if find(start) == find(end) == find(1):
+        for start,_,distance in roads:
+            if find(start) == find(1):
                 ans=min(ans,distance)
         return ans
